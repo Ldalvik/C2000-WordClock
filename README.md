@@ -2,7 +2,7 @@
 A replication of my "RGB-WordClock" on a TI-C2000 F28069M, written in bare metal C.
 
 ## Software
-Since there is no official HAL for this device, this project required deep digging into data sheets. I threw together a small library that does basic things like starting/stopping interrupts, interfacing the main loop to be more arduino-like, and all the other IO related things I would need like digital in/out and muxing. The most important part was setting the SPI peripheral to work with a real-time clock, specifically the DS1302. After reading the datasheet about 100 times, I managed to get the settings correct (baud-rate, polarity/phase, etc). I created a full library for the DS1302 to work with this F2806x as well.
+Since there is no official HAL for this device, this project required deep digging into data sheets. I threw together a small library that does basic things like starting/stopping interrupts, interfacing the main loop to be more arduino-like, and all the other IO related things I would need like digital in/out and muxing. The most important part was setting the SPI peripheral to work with a real-time clock, specifically the DS1302. After reading the datasheet, I was able to get the correct settings (baud-rate, polarity/phase, etc) and communicate back and forth with the RTC. I created a full library for it to work with this F2806x as well.
 
 # Hardware
 
